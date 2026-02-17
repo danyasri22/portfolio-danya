@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Danya sri — Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-200 overflow-x-hidden">
+    <style>
+        html.light body {
+            background: #f8fafc !important;
+            color: #1e293b !important;
+        }
+        html.light h1, html.light h2, html.light h3, html.light h4, html.light h5, html.light h6,
+        html.light strong, html.light .font-bold, html.light .font-extrabold {
+            color: #1e293b !important;
+        }
+        html.light p, html.light span, html.light a {
+            color: #475569;
+        }
+        html.light a:hover {
+            color: #1e293b;
+        }
+        html.light .hover\:text-indigo-400:hover {
+            color: #6366f1 !important;
+        }
+        html.light .text-indigo-400 {
+            color: #4f46e5 !important;
+        }
+        html.light .text-slate-400 {
+            color: #64748b;
+        }
+        html.light .text-white {
+            color: #1e293b;
+        }
+        html.light .bg-slate-900 {
+            background-color: #f1f5f9 !important;
+            border-color: #e2e8f0 !important;
+        }
+        html.light .bg-slate-800 {
+            background-color: #e2e8f0 !important;
+        }
+        html.light .border-slate-800 {
+            border-color: #e2e8f0 !important;
+        }
+        html.light .bg-white {
+            background-color: white;
+            color: #1e293b;
+        }
+        html.light .hover\:bg-indigo-50:hover {
+            background-color: #f0f4ff !important;
+        }
+        html.light .bg-indigo-600 {
+            background: linear-gradient(135deg, #6366f1, #4f46e5) !important;
+        }
+        html.light .bg-indigo-600:hover {
+            background: linear-gradient(135deg, #4f46e5, #4338ca) !important;
+        }
+        html.light .hover\:bg-slate-800:hover {
+            background-color: #e2e8f0 !important;
+            border: 1px solid #cbd5e1 !important;
+        }
+        html.light #contactForm {
+            background-color: rgba(148, 163, 184, 0.1) !important;
+            border-color: #cbd5e1 !important;
+        }
+        html.light #contactForm input,
+        html.light #contactForm textarea,
+        html.light #contactForm select {
+            border-color: #cbd5e1 !important;
+        }
+    </style>
+
+    <nav class="fixed w-full z-50 top-0 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass px-6 py-3 rounded-2xl">
+            <div class="text-lg font-extrabold tracking-tighter">
+                <span class="accent">J DANYA SRI</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+                <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="themeToggle" class="p-2 rounded-md glass">🌙</button>
+                <a href="mailto:hello@yourname.dev" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-sm transition font-semibold">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center justify-center pt-20">
+        <svg class="blob" width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="left:-80px;top:40px;">
+            <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs>
+            <circle cx="210" cy="210" r="160" fill="url(#g1)"/>
+        </svg>
+        <svg class="blob" width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg" style="right:-60px;bottom:20px;">
+            <circle cx="180" cy="180" r="140" fill="rgba(96,165,250,0.18)"/>
+        </svg>
+        <div class="max-w-4xl mx-auto text-center px-6 z-10">
+            <div class="inline-block px-4 py-1.5 mb-6 border border-slate-800 rounded-full bg-slate-900/50 text-slate-400 text-xs font-medium tracking-widest uppercase">Available for freelance</div>
+            <h1 class="hero-title text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">Hi, I'm <span class="accent"> J DANYA SRI </span><br><span class="text-indigo-400">Web Developer</span> .</h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">I build responsive, accessible, and high-performance web apps. I focus on clear UX, maintainable code, and fast load times.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center reveal">
+                <a href="#projects" class="bg-white text-slate-950 px-8 py-3 rounded-2xl font-bold hover:bg-indigo-50 transition shadow-lg">View Projects</a>
+                <a href="#contact" class="glass px-8 py-3 rounded-2xl font-bold hover:bg-slate-800 transition">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- diagonal SVG separator -->
+    <svg class="separator" viewBox="0 0 1440 64" preserveAspectRatio="none">
+        <path d="M0 64L1440 0V64H0z" fill="#0f172a"/>
+    </svg>
+
+    <main>
+        
+                <section id="about" class="py-24 px-6 bg-slate-950">
+    <div class="max-w-4xl mx-auto text-center">
+        
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">About Me</h2>
+        
+        <div class="space-y-6 text-slate-300 text-lg md:text-xl leading-relaxed">
+            <p>
+                I'm a front-end developer who loves turning ideas into polished products. 
+                Over the last few months, I've shipped features for web apps, dashboards, 
+                and consumer sites—balancing design and performance.
+            </p>
+            <p>
+                When I'm not coding, I enjoy reading, learning new design patterns, 
+                and expanding my knowledge base.
+            </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+            <a href="#work" class="px-8 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-lg transition shadow-lg shadow-indigo-500/20">
+                See my work
+            </a>
+            <a href="https://github.com/danyasri22" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="px-8 py-3 bg-slate-900 border border-slate-800 hover:border-indigo-500/50 text-white font-semibold rounded-xl transition flex items-center gap-2 active:scale-95">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/danya-sri-531aa1367/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="px-8 py-3 bg-slate-900 border border-slate-800 hover:border-indigo-500/50 text-white font-semibold rounded-xl transition flex items-center gap-2 active:scale-95">
+                LinkedIn
+            </a>
+        </div>
+        
+    </div>
+</section>
+        </section>
+
+        <section id="projects" class="py-20 bg-slate-900/20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Projects</h2>
+                    <p class="text-slate-400">A selection of projects I've built. Click any card to learn more.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <article class="card-hover tilt-card bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                        <div class="tilt-inner rounded-lg p-0">
+                            <img src="assests/images/FoodVault.png" alt="FoodVault project" class="rounded-xl w-full h-40 object-cover mb-4">
+                            <div class="flex items-center justify-end mb-2">
+                                <button class="px-3 py-1 rounded-md bg-indigo-600" data-project="1">Details</button>
+                            </div>
+                            <h3 class="text-lg font-bold">FoodVault — Smart Sustainable Pantry & Donation Hub</h3>
+                            <p class="text-slate-400 text-sm mt-2">FoodVault tracks pantry items and expiry dates, sends alerts, provides AI-driven recipe suggestions and shopping lists, and includes a donation hub and gamified features to promote sustainability.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="card-hover tilt-card bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                        <div class="tilt-inner rounded-lg p-0">
+                            <img src="assests/images/mealbridge.png" alt="MealBridge project" class="rounded-xl w-full h-40 object-cover mb-4">
+                            <div class="flex items-center justify-end mb-2">
+                                <button class="px-3 py-1 rounded-md bg-indigo-600" data-project="2">Details</button>
+                            </div>
+                            <h3 class="text-lg font-bold">MealBridge — Surplus Food Donation Platform</h3>
+                            <p class="text-slate-400 text-sm mt-2">MealBridge connects surplus food donors, local NGOs, and volunteers for quick claiming and pickup. Features NGO integration, claiming workflows, scheduling, and donation-tracking dashboards.</p>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="card-hover tilt-card bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                        <div class="tilt-inner rounded-lg p-0">
+                            <img src="assests/images/SheGlams.png" alt="SheGlams project" class="rounded-xl w-full h-40 object-cover mb-4">
+                            <div class="flex items-center justify-end mb-2">
+                                <button class="px-3 py-1 rounded-md bg-indigo-600" data-project="3">Details</button>
+                            </div>
+                            <h3 class="text-lg font-bold">SheGlams — Beauty Salon Marketing Site</h3>
+                            <p class="text-slate-400 text-sm mt-2">SheGlams is a marketing website for a beauty salon, showcasing services, promotions, gallery highlights, and clear booking CTAs to drive appointments and in-store visits.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Skills</h2>
+
+                <div class="mb-6 flex gap-3 items-center">
+                    <div class="text-slate-400">Filter:</div>
+                    <button class="skill-filter px-3 py-1 rounded-md bg-slate-800 text-sm" data-filter="all">All</button>
+                    <button class="skill-filter px-3 py-1 rounded-md bg-slate-800 text-sm" data-filter="tech">Tech</button>
+                    <button class="skill-filter px-3 py-1 rounded-md bg-slate-800 text-sm" data-filter="soft">Soft</button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Technical Skills</h3>
+                        <div class="space-y-4">
+                            <div class="skill-row" data-type="tech" tabindex="0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <div class="flex items-center gap-3"><span class="skill-dot bg-violet-500 w-3 h-3 rounded-full"></span><strong class="text-white">HTML</strong></div>
+                                    <div class="text-slate-400 text-sm">96%</div>
+                                </div>
+                                <div class="skill-track bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="skill-fill bg-gradient-to-r from-violet-500 to-indigo-400 h-2 w-0" data-fill="96"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-row" data-type="tech" tabindex="0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <div class="flex items-center gap-3"><span class="skill-dot bg-sky-400 w-3 h-3 rounded-full"></span><strong class="text-white">CSS</strong></div>
+                                    <div class="text-slate-400 text-sm">92%</div>
+                                </div>
+                                <div class="skill-track bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="skill-fill bg-gradient-to-r from-sky-400 to-indigo-400 h-2 w-0" data-fill="92"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-row" data-type="tech" tabindex="0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <div class="flex items-center gap-3"><span class="skill-dot bg-cyan-400 w-3 h-3 rounded-full"></span><strong class="text-white">Tailwind CSS</strong></div>
+                                    <div class="text-slate-400 text-sm">88%</div>
+                                </div>
+                                <div class="skill-track bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="skill-fill bg-gradient-to-r from-cyan-400 to-indigo-400 h-2 w-0" data-fill="88"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-row" data-type="tech" tabindex="0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <div class="flex items-center gap-3"><span class="skill-dot bg-indigo-500 w-3 h-3 rounded-full"></span><strong class="text-white">JavaScript</strong></div>
+                                    <div class="text-slate-400 text-sm">90%</div>
+                                </div>
+                                <div class="skill-track bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="skill-fill bg-gradient-to-r from-indigo-500 to-cyan-400 h-2 w-0" data-fill="90"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-row" data-type="tech" tabindex="0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <div class="flex items-center gap-3"><span class="skill-dot bg-emerald-400 w-3 h-3 rounded-full"></span><strong class="text-white">React</strong></div>
+                                    <div class="text-slate-400 text-sm">85%</div>
+                                </div>
+                                <div class="skill-track bg-slate-800 rounded-full h-2 overflow-hidden">
+                                    <div class="skill-fill bg-gradient-to-r from-emerald-400 to-indigo-400 h-2 w-0" data-fill="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Soft Skills</h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button class="skill-chip p-3 rounded-lg glass text-left" data-type="soft" data-desc="Works well in cross-functional teams, shares knowledge, and supports peers">Team Collaboration</button>
+                            <button class="skill-chip p-3 rounded-lg glass text-left" data-type="soft" data-desc="Leads by example, mentors junior devs, and coordinates delivery across squads">Adaptability</button>
+                            <button class="skill-chip p-3 rounded-lg glass text-left" data-type="soft" data-desc="Clear and timely communicator across stakeholders and engineers">Communication</button>
+                            <button class="skill-chip p-3 rounded-lg glass text-left" data-type="soft" data-desc="Analytical problem-solver who breaks down issues and ships fixes">Problem Solving</button>
+                        </div>
+
+                        <div id="skillDetail" class="mt-4 p-4 bg-slate-900/30 rounded-lg text-slate-300 hidden">
+                            <strong id="skillTitle" class="block text-white mb-1"></strong>
+                            <p id="skillDesc" class="text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modals -->
+        <div id="projectModals" aria-hidden="true">
+            <div class="hidden modal" id="modal-1">
+                <div class="fixed inset-0 flex items-center justify-center modal-backdrop">
+                    <div class="bg-slate-900 rounded-2xl max-w-3xl w-full p-6 border border-slate-800">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <img src="assests/images/FoodVault.png" alt="FoodVault screenshot" class="w-full md:w-1/2 rounded-lg modal-screenshot">
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start gap-4">
+                                    <h3 class="text-2xl font-bold">FoodVault — Smart Sustainable Pantry & Donation Hub</h3>
+                                    <button class="text-slate-400" data-close>✕</button>
+                                </div>
+                                <p class="text-slate-300 mt-4">FoodVault is a smart, sustainability-focused pantry system: add items, track expiry dates, receive expiry alerts, and get AI-based recipe suggestions and shopping lists. It also doubles as a donation hub, enabling surplus food claims and pickups, and includes gamification elements to encourage reduced waste and meet sustainability goals. Offline-capable with lightweight local caching and sync.</p>
+                                <div class="mt-6 flex gap-3">
+                                    <a href="https://danyasri22.github.io/FoodVault" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-indigo-600 rounded-md">Live Demo</a>
+                                    <a href="https://github.com/danyasri22/FoodVault" target="_blank" rel="noopener noreferrer" class="px-4 py-2 glass rounded-md">Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden modal" id="modal-2">
+                <div class="fixed inset-0 flex items-center justify-center modal-backdrop">
+                    <div class="bg-slate-900 rounded-2xl max-w-3xl w-full p-6 border border-slate-800">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <img src="assests/images/mealbridge.png" alt="MealBridge screenshot" class="w-full md:w-1/2 rounded-lg modal-screenshot">
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start gap-4">
+                                    <h3 class="text-2xl font-bold">MealBridge — Surplus Food Donation Platform</h3>
+                                    <button class="text-slate-400" data-close>✕</button>
+                                </div>
+                                <p class="text-slate-300 mt-4">MealBridge is a surplus food donation and claiming platform connecting businesses with NGOs and volunteers. It includes NGO onboarding, claim/assign flows, pickup scheduling, audit logs, and dashboards to track donations and impact.</p>
+                                <div class="mt-6 flex gap-3"><a href="https://danyasri22.github.io/MealBridge" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-indigo-600 rounded-md">Live</a><a href="https://github.com/danyasri22/MealBridge" target="_blank" rel="noopener noreferrer" class="px-4 py-2 glass rounded-md">Source</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden modal" id="modal-3">
+                <div class="fixed inset-0 flex items-center justify-center modal-backdrop">
+                    <div class="bg-slate-900 rounded-2xl max-w-3xl w-full p-6 border border-slate-800">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <img src="assests/images/SheGlams.png" alt="SheGlams screenshot" class="w-full md:w-1/2 rounded-lg modal-screenshot">
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start gap-4">
+                                    <h3 class="text-2xl font-bold">SheGlams — Beauty Salon Marketing Site</h3>
+                                    <button class="text-slate-400" data-close>✕</button>
+                                </div>
+                                <p class="text-slate-300 mt-4">SheGlams is a marketing site for a local beauty salon, built to showcase services, team, promotions, and a visual gallery. Features include a responsive service catalog, booking CTAs, SEO-friendly content, and contact/booking integration to increase appointments.</p>
+                                <div class="mt-6 flex gap-3"><a href="https://danyasri22.github.io/SheGlams" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-indigo-600 rounded-md">Live</a><a href="https://github.com/danyasri22/SheGlams" target="_blank" rel="noopener noreferrer" class="px-4 py-2 glass rounded-md">Source</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="contact" class="py-16 px-6 mt-6">
+            <div class="max-w-6xl mx-auto border-t border-slate-800 pt-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Contact form -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-white mb-4">Get in touch</h2>
+                        <p class="text-slate-400 mb-6">I'm available for freelance work, contracts, or full-time opportunities. Fill the form and I'll get back within 48 hours.</p>
+
+                        <form id="contactForm" class="space-y-4 bg-slate-900/40 p-6 rounded-2xl border border-slate-800">
+                            <input type="text" id="name" name="name" placeholder="Your name" required class="w-full px-4 py-3 rounded-md bg-transparent border border-slate-700 focus:border-indigo-500 outline-none placeholder-slate-400">
+                            <input type="email" id="email" name="email" placeholder="Your email" required class="w-full px-4 py-3 rounded-md bg-transparent border border-slate-700 focus:border-indigo-500 outline-none placeholder-slate-400">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full px-4 py-3 rounded-md bg-transparent border border-slate-700 focus:border-indigo-500 outline-none placeholder-slate-400">
+                            <label class="sr-only" for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required class="w-full px-4 py-3 rounded-md bg-transparent border border-slate-700 focus:border-indigo-500 outline-none placeholder-slate-400"></textarea>
+
+                            <div class="flex gap-3 items-center">
+                                <select id="contactMethod" class="px-3 py-2 rounded-md bg-transparent border border-slate-700 focus:border-indigo-500 outline-none">
+                                    <option value="email">Prefer email</option>
+                                    <option value="phone">Prefer phone</option>
+                                </select>
+                                <a href="resume.pdf" download class="ml-auto px-4 py-2 bg-indigo-600 rounded-md text-white">Download Resume</a>
+                            </div>
+
+                            <!-- honeypot to reduce spam -->
+                            <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off">
+
+                            <div class="flex items-center gap-3">
+                                <button type="submit" id="sendBtn" class="px-5 py-2 bg-indigo-600 rounded-md text-white font-semibold">Send message</button>
+                                <button type="button" id="clearBtn" class="px-4 py-2 glass rounded-md">Clear</button>
+                                <div id="formStatus" class="text-sm text-slate-400 ml-3"></div>
+                            </div>
+                        </form>
+
+                        <p class="text-xs text-slate-500 mt-3">By contacting me you agree to receive a response. I respect your privacy.</p>
+                        <div>
+                            <p class="text-slate-500 text-sm italic">Designed & Built by Your J DANYA SRI © 2026</p>
+                        </div>
+                    </div>
+
+                    
+
+                            
+
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Floating CTA -->
+        <a href="#contact" class="fixed right-6 bottom-8 z-50 bg-gradient-to-br from-indigo-500 to-cyan-400 text-white px-4 py-3 rounded-full shadow-lg transform hover:scale-105 transition">Let's talk</a>
+
+        <!-- Lightbox overlay -->
+        <div id="lightbox" class="fixed inset-0 hidden items-center justify-center z-60">
+            <div id="lightboxBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+            <div class="relative max-w-4xl w-full p-6 z-70">
+                <button id="lightboxClose" class="absolute right-4 top-4 text-white text-2xl z-80">✕</button>
+                <img id="lightboxImg" src="" alt="Preview" class="w-full rounded-lg shadow-2xl" />
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
